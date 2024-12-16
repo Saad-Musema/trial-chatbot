@@ -220,9 +220,17 @@ else:
 
         # Generate a response using the Gemini API.
         model = genai.GenerativeModel("gemini-1.5-flash")
+        # response = model.generate_content(
+        #     f"{system_message}\n\nUser: {prompt}"
+        # )
+        
         response = model.generate_content(
-            f"{system_message}\n\nUser: {prompt}"
+        f"{system_message}\n\nUser: {prompt}",
+        generation_config = genai.types.GenerationConfig(
+            temperature = "1.0",
+            max_output_tokens = "300"
         )
+)
 
 
         # Display the assistant's response.
