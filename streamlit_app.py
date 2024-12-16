@@ -2,7 +2,7 @@ import streamlit as st
 from gemini_ai import GeminiAI
 
 # Initialize the AI (Replace 'YOUR_API_KEY' with your actual API key)
-gemini = GeminiAI(api_key="YOUR_API_KEY")
+gemini = GeminiAI(api_key="AIzaSyASnkyIRB2Abu4qUY8yfI8K_2sYLqhh5io")
 
 # Streamlit app title
 st.title("GeminiAI Interface")
