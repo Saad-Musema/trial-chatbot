@@ -237,13 +237,3 @@ else:
         with st.chat_message("assistant"):
             st.markdown(response.text)
         st.session_state.messages.append({"role": "assistant", "content": response.text})
-        
-        
-        url = "https://api.aivideoapi.com/runway/generate/text"
-        headers = {
-            "accept": "application/json",
-            "content-type": "application/json"
-        }
-        data = {
-            "input_text": assistant_response  # The text you want to generate a video for
-        }
