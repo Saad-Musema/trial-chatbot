@@ -10,7 +10,7 @@ st.write(
 )
 
 # Retrieve the Gemini API key from `secrets.toml`.
-api_key = AIzaSyASnkyIRB2Abu4qUY8yfI8K_2sYLqhh5io
+api_key = "AIzaSyASnkyIRB2Abu4qUY8yfI8K_2sYLqhh5io"
 
 # Ensure the API key exists.
 if not api_key:
