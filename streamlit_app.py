@@ -1,6 +1,22 @@
 import streamlit as st
 import google.generativeai as genai
 
+temperature_options = {
+    "Very Creative": 1.0,
+    "Creative": 0.7,
+    "Balanced": 0.5,
+    "Realistic": 0.3,
+    "More Realistic": 0.2
+}
+
+max_length_options = {
+    "Very Short": 50,   # Shortest response
+    "Short": 100,       # A bit more concise
+    "Balanced": 150,    # Balanced length
+    "Long": 200,        # Longer response
+    "Very Long": 300    # Maximal response
+}
+
 # Show title and description.
 st.title("📚 The Writer's Lens Chatbot")
 st.write(
@@ -32,6 +48,24 @@ else:
 
     # Sidebar for user options.
     with st.sidebar:
+        # Temperature selection
+        temperature_label = st.selectbox(
+            "Choose creativity of the response:",
+            list(temperature_options.keys())
+        )
+        temperature = temperature_options[temperature_label]
+
+        # Max length selection
+        max_length_label = st.selectbox(
+            "Choose response length:",
+            list(max_length_options.keys())
+        )
+        max_length = max_length_options[max_length_label]
+
+        # Show selected settings
+        st.write(f"**Selected Temperature:** {temperature_label} ({temperature})")
+        st.write(f"**Selected Max Length:** {max_length_label} ({max_length} tokens)")
+        
         st.header("Choose an Author Style")
         author = st.selectbox(
             "Select a writing style:",
@@ -190,7 +224,18 @@ else:
             f"{system_message}\n\nUser: {prompt}"
         )
 
+
         # Display the assistant's response.
         with st.chat_message("assistant"):
             st.markdown(response.text)
         st.session_state.messages.append({"role": "assistant", "content": response.text})
+        
+        
+        url = "https://api.aivideoapi.com/runway/generate/text"
+        headers = {
+            "accept": "application/json",
+            "content-type": "application/json"
+        }
+        data = {
+            "input_text": assistant_response  # The text you want to generate a video for
+        }
