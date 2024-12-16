@@ -82,11 +82,56 @@ else:
 
         # Prompt engineering to integrate author style.
         author_description = {
-            "Edgar Allan Poe": "Gothic and mysterious prose with vivid imagery.",
-            "Jane Austen": "Witty and romantic style reflecting Regency-era social settings.",
-            "George Orwell": "Analytical and concise prose with dystopian undertones.",
-            "Custom Writer": "Custom style specified by the user."
-        }
+    "Edgar Allan Poe": "Gothic and mysterious prose with vivid imagery.",
+    "Jane Austen": "Witty and romantic style reflecting Regency-era social settings.",
+    "George Orwell": "Analytical and concise prose with dystopian undertones.",
+    "Custom Writer": "Custom style specified by the user.",
+    "William Shakespeare": "Poetic, dramatic language with rich metaphors and iambic pentameter.",
+    "Mark Twain": "Humorous, colloquial prose with social commentary on human nature.",
+    "Hemingway": "Sparse, direct prose often focusing on themes of masculinity and human struggle.",
+    "F. Scott Fitzgerald": "Elegant, lyrical prose capturing the glamour and disillusionment of the Jazz Age.",
+    "Charles Dickens": "Detailed descriptions with a focus on social critique and memorable characters.",
+    "Leo Tolstoy": "Philosophical and moral, with a deep focus on family, morality, and Russian society.",
+    "Virginia Woolf": "Stream-of-consciousness narrative with a focus on inner emotional experiences.",
+    "Ernest Hemingway": "Short, direct prose with deep underlying themes of heroism and despair.",
+    "James Joyce": "Complex, experimental language with a focus on consciousness and interior monologue.",
+    "J.K. Rowling": "Richly detailed narratives filled with magic, imagination, and moral choices.",
+    "Haruki Murakami": "Surreal and philosophical with a blend of the ordinary and the supernatural.",
+    "Kurt Vonnegut": "Darkly humorous, satirical, often anti-war in theme with a fragmented narrative style.",
+    "J.R.R. Tolkien": "Epic fantasy with detailed world-building and high-stakes adventure.",
+    "George R.R. Martin": "Richly detailed, morally complex character-driven narratives within political intrigue.",
+    "Sylvia Plath": "Introspective, poetic prose, often exploring themes of mental health, death, and identity.",
+    "Margaret Atwood": "Complex, speculative fiction with themes of societal control, feminism, and dystopia.",
+    "Toni Morrison": "Lyrical, rich prose exploring African American experiences and societal issues.",
+    "Ray Bradbury": "Imaginative, often speculative prose with a focus on individualism and censorship.",
+    "Harper Lee": "Direct, poignant prose exploring themes of morality, justice, and racial issues.",
+    "Gabriel García Márquez": "Magical realism with vibrant prose and exploration of Latin American history.",
+    "Oscar Wilde": "Witty, satirical, and often ironic, with a focus on beauty and social critique.",
+    "Dostoevsky": "Philosophical and psychological, exploring deep existential themes, guilt, and redemption.",
+    "John Steinbeck": "Clear, direct prose focused on social issues and the dignity of the human spirit.",
+    "Agatha Christie": "Mysterious and methodical, with tightly-plotted narratives filled with twists and suspense.",
+    "Franz Kafka": "Existential and surreal prose often centered around alienation and absurdity.",
+    "Emily Dickinson": "Concise, contemplative poetry with an introspective look at life, death, and nature.",
+    "E.M. Forster": "Sensitive explorations of social and personal conflicts, with a focus on character development.",
+    "Arthur Conan Doyle": "Masterful detective stories often set against detailed Victorian backdrops.",
+    "Willa Cather": "Simple, rural prose capturing the beauty of the American Midwest with lyrical imagery.",
+    "Khaled Hosseini": "Rich narratives blending familial bonds, tragedy, and cultural displacement.",
+    "Chinua Achebe": "Sparse, clear prose addressing the cultural and social consequences of colonialism.",
+    "C.S. Lewis": "Philosophical yet accessible, blending Christian allegory with moral teachings in a fictional context.",
+    "Philip K. Dick": "Speculative fiction questioning reality, identity, and individualism within a dystopian future.",
+    "Alice Walker": "Vibrant, deeply emotional prose often focusing on African American women’s experiences.",
+    "Ralph Waldo Emerson": "Philosophical essays blending natural observation with spiritual introspection.",
+    "Jack London": "Adventure-filled prose with an emphasis on survival, nature, and the human spirit.",
+    "Maya Angelou": "Poetic, deeply personal narratives that explore race, identity, and resilience.",
+    "Zora Neale Hurston": "Rich dialect and folklore, with themes of identity and the African American experience.",
+    "Jean-Paul Sartre": "Existential prose, focusing on individual freedom, anxiety, and the absurdity of existence.",
+    "Louise Erdrich": "Complex family sagas rooted in Native American culture, with themes of identity and history.",
+    "David Foster Wallace": "Dense, verbose, and often humorous prose with an exploration of postmodern alienation.",
+    "Chimamanda Ngozi Adichie": "Crisp, engaging narratives blending Nigerian culture with a modern, feminist viewpoint.",
+    "William Faulkner": "Complex, multi-layered prose reflecting the Southern Gothic style, often focusing on race and history.",
+    "Mario Vargas Llosa": "Rich prose with a focus on politics, identity, and the complexities of Latin American society."
+}
+
 
         style_context = author_description.get(
         st.session_state.selected_author.split(" (")[0], ""
