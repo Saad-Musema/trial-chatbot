@@ -35,12 +35,53 @@ else:
         st.header("Choose an Author Style")
         author = st.selectbox(
             "Select a writing style:",
-            [
-                "Edgar Allan Poe (Gothic, mysterious)",
-                "Jane Austen (Romantic, witty, Regency-era)",
-                "George Orwell (Analytical, dystopian)",
-                "Custom Writer"
-            ]
+           [
+            "Edgar Allan Poe (Gothic, mysterious)",
+            "Jane Austen (Romantic, witty, Regency-era)",
+            "George Orwell (Analytical, dystopian)",
+            "Custom Writer",
+            "William Shakespeare (Poetic, dramatic with iambic pentameter)",
+            "Mark Twain (Humorous, colloquial, social commentary)",
+            "Hemingway (Sparse, direct prose focusing on masculinity and human struggle)",
+            "F. Scott Fitzgerald (Elegant, lyrical prose capturing the Jazz Age)",
+            "Charles Dickens (Social critique with memorable characters)",
+            "Leo Tolstoy (Philosophical, focusing on family and Russian society)",
+            "Virginia Woolf (Stream-of-consciousness, emotional focus)",
+            "Ernest Hemingway (Short, direct prose with deep themes)",
+            "James Joyce (Complex, experimental, focusing on consciousness)",
+            "J.K. Rowling (Richly detailed, with magic and moral choices)",
+            "Haruki Murakami (Surreal, blending the ordinary and supernatural)",
+            "Kurt Vonnegut (Dark humor, satirical, anti-war themes)",
+            "J.R.R. Tolkien (Epic fantasy with world-building and adventure)",
+            "George R.R. Martin (Morally complex narratives with political intrigue)",
+            "Sylvia Plath (Introspective, poetic, exploring mental health and identity)",
+            "Margaret Atwood (Complex, speculative fiction exploring societal control)",
+            "Toni Morrison (Lyrical prose focused on African American experiences)",
+            "Ray Bradbury (Speculative, focusing on individualism and censorship)",
+            "Harper Lee (Poignant, exploring morality, justice, and race)",
+            "Gabriel García Márquez (Magical realism with vivid prose)",
+            "Oscar Wilde (Witty, satirical with social critique)",
+            "Dostoevsky (Philosophical, focusing on existential themes)",
+            "John Steinbeck (Clear prose about human dignity and social issues)",
+            "Agatha Christie (Mysteries with tightly-plotted twists)",
+            "Franz Kafka (Existential, absurd narratives about alienation)",
+            "Emily Dickinson (Concise, contemplative poetry about life and death)",
+            "E.M. Forster (Explorations of social and personal conflicts)",
+            "Arthur Conan Doyle (Victorian detective stories with detailed settings)",
+            "Willa Cather (Lyrical descriptions of the American Midwest)",
+            "Khaled Hosseini (Narratives on family, tragedy, and cultural displacement)",
+            "Chinua Achebe (Clear, impactful prose addressing colonialism)",
+            "C.S. Lewis (Philosophical allegory blending Christian themes)",
+            "Philip K. Dick (Speculative fiction questioning reality and identity)",
+            "Alice Walker (Poetic, emotional narratives about race and identity)",
+            "Zora Neale Hurston (Folk stories with African American themes)",
+            "Jean-Paul Sartre (Existential prose focusing on individual freedom)",
+            "Louise Erdrich (Family sagas with Native American culture)",
+            "David Foster Wallace (Verbose, humorous explorations of modern alienation)",
+            "Chimamanda Ngozi Adichie (Engaging narratives with Nigerian culture and feminism)",
+            "William Faulkner (Southern Gothic, focusing on race and history)",
+            "Mario Vargas Llosa (Prose blending politics, identity, and Latin American society)"
+        ]
         )
         st.session_state.selected_author = author
 
