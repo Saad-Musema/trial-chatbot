@@ -89,8 +89,9 @@ else:
         }
 
         style_context = author_description.get(
-            st.session_state.selected_author.split(" ("[0]), ""
-        )
+        st.session_state.selected_author.split(" (")[0], ""
+    )
+
 
         system_message = (
             f"You are a writer crafting in the style of {st.session_state.selected_author.split(' (')[0]}. "
