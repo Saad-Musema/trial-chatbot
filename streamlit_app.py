@@ -223,14 +223,12 @@ else:
         # response = model.generate_content(
         #     f"{system_message}\n\nUser: {prompt}"
         # )
-        temperature = 0.8  # Example temperature value. Adjust as needed.
-        max_output_tokens = 500 
         
         response = model.generate_content(
         f"{system_message}\n\nUser: {prompt}",
         generation_config = genai.types.GenerationConfig(
             temperature = temperature,
-            max_output_tokens = max_output_tokens
+            max_output_tokens = max_length
         )
 )
 
